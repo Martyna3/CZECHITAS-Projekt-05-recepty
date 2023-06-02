@@ -1,0 +1,191 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: snow;
+    background-color: black;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.names {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.salat {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/salat.jpg) no-repeat center center;
+    min-height: 200px;
+}
+
+.chlebicek {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/chlebicek.jpg) no-repeat center center;
+    min-height: 90px;
+}
+
+.tacos {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/tacos.jpg) no-repeat center center;
+    min-height: 90px;
+}
+
+.pita {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/cizrna.jpg) no-repeat center center;
+    min-height: 90px;
+}
+
+.burger {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/burger.jpg) no-repeat center center;
+    min-height: 90px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    padding: 10px;
+    margin-bottom: 1px;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+.all {
+    margin: 10px;
+}
+
+@media (min-width: 480px) {
+
+    .left {
+        display: flex;
+    }
+
+    .right {
+        display: flex;
+    }
+
+    .menu {
+        flex: 1 1 calc(100%/2);
+        padding: 20px;
+    }
+
+    .chlebicek, .tacos {
+        margin-right: 1px;
+    }
+
+    .chlebicek, .pita, .tacos, .burger {
+        min-height: 150px;
+    }
+
+    .salat {
+        min-height: 250px;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .names {
+        font-size: 36px;
+    }
+
+
+}
+
+@media (min-width: 860px) {
+
+    .all {
+        display: flex;
+    }
+
+    .salat {
+        min-height: 400px;
+        margin: 0 1px 0 0;
+    }
+
+    .chlebicek, .pita, .tacos, .burger {
+        min-height: 200px;
+    }
+    .chlebicek {
+        margin: 0 1px 1px 0;
+    }
+
+    .pita {
+        margin: 0 1px 0 0;
+    }
+
+    .tacos {
+        margin: 0 0 1px 0;
+    }
+
+    .burger {
+        margin: 0;
+    }
+
+    .big {
+        flex: 1 1 calc(100%/3);
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 calc(100%/3)
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 calc(100%/3)
+    }
+
+    .name {
+        font-size: 28px;
+    }
+
+    .names {
+        font-size: 48px;
+    }
+
+    .menu {
+        padding: 20px;
+    }
+
+
+
+
+}
